@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 
 export default function HeroSection() {
-    const scrollToModels = () => {
-        document.getElementById('models-section')?.scrollIntoView({
+    const scrollToWhyDigitalize = () => {
+        document.getElementById('why-digitalize')?.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
         })
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
                 {/* CTA Button */}
                 <motion.button
-                    onClick={scrollToModels}
+                    onClick={scrollToWhyDigitalize}
                     className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-semibold text-lg shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 cursor-pointer"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function HeroSection() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
                 >
-                    <span>Ver Opciones</span>
+                    <span>Ilumíname</span>
                     <motion.div
                         animate={{ y: [0, 5, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}

@@ -13,7 +13,7 @@ export const modelsData = [
         shortDescription: 'Ideal si teneis claro lo que queréis y no va a cambiar.',
         riskNote: 'Ojo: Si después queréis cambiar algo, hay que presupuestarlo aparte.',
         pros: [
-            'Sabeis exactamente cuánto os va a costar',
+            'Sabéis exactamente cuánto os va a costar',
             'Sin cuotas mensuales',
             'Entrega clara y definida'
         ],
@@ -34,11 +34,11 @@ export const modelsData = [
         icon: Clock,
         vibe: 'Variable • Flexible',
         isRecommended: false,
-        description: 'Me contratis por horas. Trabajo lo que necesiteis hasta que se acaben.',
-        shortDescription: 'Solo pagais las horas que useis.',
+        description: 'Me contratáis por horas. Trabajo lo que necesitéis hasta que se acaben.',
+        shortDescription: 'Solo pagáis las horas que uséis.',
         riskNote: 'Ojo: Es difícil saber cuánto costará el proyecto final.',
         pros: [
-            'Solo pagais por lo que trabajo',
+            'Solo pagáis por lo que uséis',
             'Máxima flexibilidad para cambiar de idea',
             'Sin compromiso a largo plazo'
         ],

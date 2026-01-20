@@ -5,10 +5,17 @@ import ModelCard from './components/ModelCard'
 import ModelModal from './components/ModelModal'
 import FloatingElements from './components/FloatingElements'
 import CreatorProfile from './components/CreatorProfile'
+import ServicesSection from './components/ServicesSection'
+import WhyDigitalizeSection from './components/WhyDigitalizeSection'
+import SimulatorSection from './components/SimulatorSection'
+import PropertySimulator from './components/PropertySimulator'
+import ProcessSection from './components/ProcessSection'
+import FaqSection from './components/FaqSection'
 import { modelsData } from './data/models'
 
 function App() {
   const [selectedModel, setSelectedModel] = useState(null)
+  const [showSimulator, setShowSimulator] = useState(false)
 
   return (
     <div className="relative min-h-screen">
@@ -19,6 +26,18 @@ function App() {
       <main className="relative z-10">
         {/* Hero Section */}
         <HeroSection />
+
+        {/* Why Digitalize Section */}
+        <WhyDigitalizeSection />
+
+        {/* Simulator Section */}
+        <SimulatorSection onOpenSimulator={() => setShowSimulator(true)} />
+
+        {/* Services Section */}
+        <ServicesSection />
+
+        {/* Process Section (Roadmap) */}
+        <ProcessSection />
 
         {/* Models Section */}
         <section
@@ -65,6 +84,11 @@ function App() {
           </motion.p>
         </section>
 
+        {/* Process Section (Roadmap) -> Moved to correct place in previous step, this step is for FAQ */}
+
+        {/* FAQ Section */}
+        <FaqSection />
+
         {/* Footer */}
         <footer className="relative py-12 px-6 border-t border-zinc-800/50">
           <div className="max-w-6xl mx-auto text-center">
@@ -85,6 +109,9 @@ function App() {
             model={selectedModel}
             onClose={() => setSelectedModel(null)}
           />
+        )}
+        {showSimulator && (
+          <PropertySimulator onClose={() => setShowSimulator(false)} />
         )}
       </AnimatePresence>
     </div>
